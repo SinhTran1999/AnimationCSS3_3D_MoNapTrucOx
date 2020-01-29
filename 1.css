@@ -1,0 +1,56 @@
+*{margin: 0; padding: 0;}
+
+.bobo{
+	width: 1000px;
+	margin: auto;
+	display: flex;
+	/*Khoang cach moi the cach deu nha*/
+	justify-content: space-between;
+    /*Thuoc tinh dong goi cua flex neu tren 1 hang nhieu qua no se xuong hang*/
+	flex-wrap: wrap;
+}
+.nap {
+    /*Luc nao thuoc tinh con cung la position:absolute*/
+    position: absolute;
+    height: 340px;
+    width: 340px;
+    border-radius: 50%;
+    background: url(1.jpg)  -33px -36px;
+    top: 32px;
+    left: 30px;
+    box-shadow: 0px 0px 2px #00000087;
+    z-index: 2;
+    /*traisition la khi hover vao phan tu bo thi cai nap se di chuyen cham 0.9s(thuoc tinh dong bang chuyen dong khi hover)*/
+    transition: 0.9s; 
+    /*transform-origin la xac dinh tam de quay*/
+    transform-origin: 50% 100%;
+}
+
+.chu {
+    height: 340px;
+    width: 340px;
+    background: #ffc0cbb8;
+    /*Luc nao thuoc tinh con cung la position:absolute*/
+    position: absolute;
+    left: 30px;
+    top: 32px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 340px;
+}
+
+.bo {
+    width: 400px;
+    height: 400px;
+    background: url(1.jpg);
+    border-radius: 50%;
+    /*Luc nao thuoc tinh bo cung la position: relative*/
+    position: relative;
+    /*Thuoc tinh perspective la kich hoat chuyen dong 3D*/
+    perspective: 400px;
+    margin-bottom: 300px;
+} 
+/*Thuoc tinh rotateX la quay truc ox 180 do*/
+.bo:hover .nap{
+	transform:  rotateX(180deg)
+}
